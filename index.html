@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91098279-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-91098279-1');
+  </script>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Best Baby Photography Services - Bangalore|Chennai|Hyderabad">
@@ -474,7 +486,7 @@ Despite his awards and achievements in versatile genres,he has his  best interes
                         </p>
 				</div>
                 <div class="col-lg-8 contact-form">
-                        <form id="contact-form" method="POST" action="https://formspree.io/mail2chethankarur@yahoo.com" role="form">
+                        <form id="contact-form" method="POST" action="POST" data-netlify="true" role="form">
                             <div class="messages"></div>
                             <div class="controls">
                                 <div class="row">
@@ -521,6 +533,15 @@ Despite his awards and achievements in versatile genres,he has his  best interes
                                         <input type="submit" class="btn btn-success btn-send text-uppercase s-btn s-btn--md s-btn--black-bg g-radius--50 g-padding-x-70--xs g-margin-b-20--xs" value="Send message" />
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="field">
+                                            <div data-netlify-recaptcha="true"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </form>
                     </div>
