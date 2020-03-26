@@ -31,6 +31,8 @@
 	  <link rel="stylesheet" href="css/font-awesome.min.css">
 	  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="css/floating-wpp.css">
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
     <script src="js/jquery.min.js"></script>
@@ -39,6 +41,8 @@
 	  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/floating-wpp.js"></script>
 
     <!-- Add jQuery library -->
     <script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
@@ -125,9 +129,6 @@
     });
   </script>
 
-  <script type="text/javascript">function add_chatinline(){var hccid=78730058;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
-add_chatinline(); </script>
-
   </head>
 
   <body data-spy="scroll" data-offset="0" data-target="#theMenu">
@@ -145,6 +146,7 @@ add_chatinline(); </script>
 
 
 	<!-- ========== HEADER SECTION ========== -->
+
 	<section id="home" name="home"></section>
 	<div id="headerwrap" class="headerwrap">
 		<div class="container">
@@ -568,4 +570,31 @@ Despite his awards and achievements in versatile genres,he has his  best interes
 
 </p>
 </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Floating WhatsApp Button Demo</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/floating-wpp.css">
+    <script type="text/javascript" src="js/floating-wpp.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myButton"></div>
+</body>
+<script type="text/javascript">
+    $(function () {
+      $('#myButton').floatingWhatsApp({
+  phone: '918884445768',
+  popupMessage: 'Hello, how can we help you?',
+  position:'right',
+  showPopup: true
+});
+    });
+</script>
 </html>
