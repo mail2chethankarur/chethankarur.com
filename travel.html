@@ -33,9 +33,6 @@
 
 </head>
 
-<script type="text/javascript">function add_chatinline(){var hccid=40344278;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
-add_chatinline(); </script>
-
 <body>
 
     <!-- ========== HEADER SECTION ========== -->
@@ -1535,4 +1532,32 @@ add_chatinline(); </script>
 
   <input name="animation" type="hidden">
   </body>
+
+  <head>
+      <meta charset="UTF-8">
+      <title>Floating WhatsApp Button Demo</title>
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <link rel="stylesheet" href="css/floating-wpp.css">
+      <script type="text/javascript" src="js/floating-wpp.js"></script>
+      <style>
+          body {
+              font-family: Arial, Helvetica, sans-serif
+          }
+      </style>
+  </head>
+
+  <body>
+      <div id="myButton"></div>
+  </body>
+  <script type="text/javascript">
+      $(function () {
+        $('#myButton').floatingWhatsApp({
+    phone: '918884445768',
+    popupMessage: 'Hello, how can we help you?',
+    position:'right',
+    showPopup: true
+  });
+      });
+  </script>
+  
 </html>

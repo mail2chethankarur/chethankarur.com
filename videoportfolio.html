@@ -28,17 +28,17 @@
       <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    
+
     <!-- Add jQuery library -->
     <script type="text/javascript" src="files/lib/jquery-1.10.2.min.js"></script>
 
     <!-- Add fancyBox main JS and CSS files -->
     <script type="text/javascript" src="files/source/jquery.fancybox.pack.js?v=2.1.5"></script>
     <link rel="stylesheet" type="text/css" href="files/source/jquery.fancybox.css?v=2.1.5" media="screen" />
-    
 
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Armata"/> 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">     
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Armata"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -49,7 +49,7 @@
 
     <style type="text/css">
         body{
-          font-family:Armata;  
+          font-family:Armata;
         }
         .row{
           margin: 0px;
@@ -114,15 +114,12 @@
     });
   </script>
 
-  <script type="text/javascript">function add_chatinline(){var hccid=40344278;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
-add_chatinline(); </script>
-
   </head>
 
   <body data-spy="scroll" data-offset="0" data-target="#theMenu">
-      
-     <!-- javascript for fb like -->   
-      
+
+     <!-- javascript for fb like -->
+
       <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -131,8 +128,8 @@ add_chatinline(); </script>
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-      
-    
+
+
     <!-- ========== HEADER SECTION ========== -->
     <section id="home" name="home"></section>
     <div id="headerwrap" class="headerwrap">
@@ -144,12 +141,12 @@ add_chatinline(); </script>
     </div><!-- /headerwrap -->
 
 
-  <!-- ========== PORTFOLIO SECTION ========== -->  
+  <!-- ========== PORTFOLIO SECTION ========== -->
   <section id="portfolio" name="portfolio"></section>
   <div id="f" class="portfolio">
   <div>
     <div class="row">
-        <div id="project-items" class="project-items">           
+        <div id="project-items" class="project-items">
             <div class="clearfix">
                 <div class="babyfolio-wrapper">
                     <div class="col-sm-4 babyfolio-video-wrapper">
@@ -183,17 +180,17 @@ add_chatinline(); </script>
                     <div class="col-sm-4 babyfolio-video-wrapper">
                         <iframe width="100%" height="200" src="https://www.youtube.com/embed/WfomvSz1NLg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
-                    
+
                     <div class="col-sm-4 babyfolio-video-wrapper">
                         <iframe width="100%" height="200" src="https://www.youtube.com/embed/LkGi95eqz_I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>
-            </div>                                                                     
+            </div>
         </div><!-- /#project-items -->
-    </div>             
+    </div>
   </div>
   </div>  <!-- f -->
-          
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -203,12 +200,12 @@ add_chatinline(); </script>
     <script src="files/js/main.js"></script>
     <script src="files/js/box.js"></script>
     <script src="//masonry.desandro.com/masonry.pkgd.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
 
-   
-      
-      
-      
+
+
+
+
     <script>
       (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
         t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
@@ -216,4 +213,31 @@ add_chatinline(); </script>
     </script>
 </p>
 </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Floating WhatsApp Button Demo</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/floating-wpp.css">
+    <script type="text/javascript" src="js/floating-wpp.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myButton"></div>
+</body>
+<script type="text/javascript">
+    $(function () {
+      $('#myButton').floatingWhatsApp({
+  phone: '918884445768',
+  popupMessage: 'Hello, how can we help you?',
+  position:'right',
+  showPopup: true
+});
+    });
+</script>
+
 </html>
