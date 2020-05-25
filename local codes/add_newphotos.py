@@ -1,6 +1,6 @@
-folder_name = 'travel'
-start_num = 114
-end_num = 122
+folder_name = 'street'
+start_num = 46
+end_num = 84
 outputpath = '/Users/chethankarur/Documents/addon.txt'
 mainstring = ''
 
@@ -14,7 +14,7 @@ for i in range(start_num,end_num+1):
     iterstring2 = """<div class="carousel-item">
 <img alt="" src="img/{0}/{1}.webp">
 </div>""".format(folder_name,i)
-    mainstring += iterstring2
+    mainstring += iterstring
 
 text_file = open(outputpath, "w")
 n = text_file.write(mainstring)
