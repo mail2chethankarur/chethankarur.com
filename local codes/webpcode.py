@@ -1,21 +1,20 @@
 from PIL import Image
 from webptools import webplib as webp
-import os
+import os, shutil
 
 #input photos path (usually in website folder in documents - it can have subfolders)
 input_base_path = '/Users/chethankarur/Documents/website/'
-output_base_path = '/Users/chethankarur/Documents/website/webpoutput/'
-os.mkdir(output_base_path)
+output_base_path = input_base_path+'webpoutput/'
 
 folders_list = os.listdir(input_base_path)
 
+# converts the photos to webp format
 def converttowebp(input_file_path):
-    input_file_path = folder_path+j
     output_file_path = input_file_path.replace("website/","website/webpoutput/").replace(".jpg",".webp")
 
     image = Image.open(input_file_path)
     width, height = image.size
-    #resize_command = "-resize 1200 800"
+
     if (width<height):
         resize_wdth = 800
         resize_height = str(int((height*800)/width))
@@ -29,15 +28,22 @@ def converttowebp(input_file_path):
     print(output_file_path)
     print ("-----")
 
+#deletes the old output folder of exists
+if os.path.exists(output_base_path):
+    shutil.rmtree(output_base_path)
+os.mkdir(output_base_path)
+
+#the main code
 for i in folders_list:
     print (7*"#")
     print (i)
     print (7*"#")
-    os.mkdir(output_base_path+i)
+
     if (i=='webpoutput' or '.' in i):
-        print ("Skipped webpoutput")
+        print ("Skipped "+str(i))
         continue
     else:
+        os.mkdir(output_base_path+i)
         folder_path = input_base_path+i+"/"
         files_list = os.listdir(folder_path)
         for j in files_list:
