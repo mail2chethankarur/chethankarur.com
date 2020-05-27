@@ -2,6 +2,8 @@ from PIL import Image
 from webptools import webplib as webp
 import os, shutil
 
+
+
 #input photos path (usually in website folder in documents - it can have subfolders)
 input_base_path = '/Users/chethankarur/Documents/website/'
 output_base_path = input_base_path+'webpoutput/'
