@@ -18,11 +18,11 @@ def converttowebp(input_file_path):
     width, height = image.size
 
     if (width<height):
-        resize_wdth = 800
-        resize_height = str(int((height*800)/width))
+        resize_wdth = 1200
+        resize_height = str(int((height*resize_wdth)/width))
     else:
-        resize_height = 1200
-        resize_wdth = str(int((width*1200)/height))
+        resize_height = 1500
+        resize_wdth = str(int((width*resize_height)/height))
     resize_command = "-resize {0} {1}".format(resize_wdth,resize_height)
 
     webp.cwebp(input_file_path,output_file_path,resize_command)
