@@ -39,7 +39,7 @@ os.mkdir(output_base_path)
 for i in folders_list:
     print (7*"#")
     print (i)
-    print (7*"#")
+
 
     if (i=='webpoutput' or '.' in i):
         print ("Skipped "+str(i))
@@ -56,3 +56,4 @@ for i in folders_list:
             if ('.jpg' not in input_file_path):
                 continue
             converttowebp(input_file_path)
+    print (7*"#")
