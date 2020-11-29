@@ -1,11 +1,11 @@
 from PIL import Image
-from webptools import webplib as webp
+# from webptools import webplib as webp
 import os, shutil
 
 
 
 #input photos path (usually in website folder in documents - it can have subfolders)
-input_base_path = '/Users/chethankarur/Documents/website/'
+input_base_path = '/Users/chethankarur/Pictures/website/'
 output_base_path = input_base_path+'webpoutput/'
 
 folders_list = os.listdir(input_base_path)
@@ -20,12 +20,16 @@ def converttowebp(input_file_path):
     if (width<height):
         resize_wdth = 1200
         resize_height = str(int((height*resize_wdth)/width))
+        image.thumbnail(size=((resize_wdth, resize_height)))
     else:
         resize_height = 1500
         resize_wdth = str(int((width*resize_height)/height))
+        image.thumbnail(size=((resize_wdth, resize_height)))
+
     resize_command = "-resize {0} {1}".format(resize_wdth,resize_height)
 
-    webp.cwebp(input_file_path,output_file_path,resize_command)
+    #webp.cwebp(input_file_path,output_file_path,resize_command)
+    image.save(output_file_path,'webp')
     print(input_file_path)
     print(output_file_path)
     print ("-----")

@@ -2,7 +2,7 @@ import random
 import os
 
 ## GIVE INPUT PATH HERE
-input_base_path = '/Users/chethankarur/Documents/GitHub/chethankarur.com/img/travel/'
+input_base_path = '/Users/chethankarur/Pictures/chethankarur.com/img/nature/'
 photos_list = os.listdir(input_base_path)
 
 random_intset = random.sample(range(10000), len(photos_list))
