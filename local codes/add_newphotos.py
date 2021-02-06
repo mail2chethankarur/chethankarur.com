@@ -1,9 +1,10 @@
-folder_name = 'street'
-start_num = 85
-end_num = 115
-outputpath = '/Users/chethankarur/Documents/addon.txt'
+folder_name = 'nature'
+start_num = 125
+end_num = 137
+outputpath = '/Users/chethankarur/Pictures/addon.txt'
 mainstring = ''
 
+count  =1
 for i in range(start_num,end_num+1):
     iterstring = """<div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p0" data-tags="Animated" data-video-url="false">
     <div href="#lb-gallery1-6" data-slide-to="{0}"data-toggle="modal">
@@ -14,7 +15,16 @@ for i in range(start_num,end_num+1):
     iterstring2 = """<div class="carousel-item">
 <img alt="" src="img/{0}/{1}.webp">
 </div>""".format(folder_name,i)
-    mainstring += iterstring2
+	
+    if (count==1):
+		i1 = iterstring
+		i2 = iterstring2
+		count+=1
+    else:
+		i1 += iterstring
+		i2 += iterstring2
+
+mainstring += i1+"\n"+"\n"+i2
 
 text_file = open(outputpath, "w")
 n = text_file.write(mainstring)
