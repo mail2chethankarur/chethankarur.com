@@ -1,5 +1,5 @@
 folder_name = 'nature'
-start_num = 125
+start_num = 41
 end_num = 137
 outputpath = '/Users/chethankarur/Pictures/addon.txt'
 mainstring = ''
