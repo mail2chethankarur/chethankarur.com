@@ -5,7 +5,7 @@ import os, shutil
 
 
 #input photos path (usually in website folder in documents - it can have subfolders)
-input_base_path = '/Users/chethankarur/Pictures/website/'
+input_base_path = '/Users/chethankarur/Pictures/EU WEB PHOTOS/'
 output_base_path = input_base_path+'webpoutput/'
 
 folders_list = os.listdir(input_base_path)
