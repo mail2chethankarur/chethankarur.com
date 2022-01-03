@@ -3,7 +3,7 @@ from PIL import Image
 import os, shutil, random
 
 #input photos path (usually in website folder in documents - it can have subfolders)
-input_base_path = '/Users/chethankarur/Pictures/web photos/'
+input_base_path = '/Users/chethankarur/Pictures/web/'
 output_base_path = input_base_path+'webpoutput/'
 website_img_path = '/Users/chethankarur/Pictures/chethankarur.com/img/'
 
