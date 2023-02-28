@@ -104,12 +104,12 @@ mainstring = ''
 
 for i in dict_legth:
     folder_name = i
-    start_num = dict_legth[i][0]
+    start_num = dict_legth[i][0]+1
     end_num = dict_legth[i][1]
     outputpath = '/Users/chethankarur/Pictures/addon.txt'
     
     count  =1
-    for i in range(start_num,end_num+1):
+    for i in range(start_num,end_num):
         iterstring = """<div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p0" data-tags="Animated" data-video-url="false">
         <div href="#lb-gallery1-6" data-slide-to="{0}"data-toggle="modal">
             <img alt="" src="img/{1}/{2}.webp">
