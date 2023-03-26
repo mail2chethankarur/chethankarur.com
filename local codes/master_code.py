@@ -18,11 +18,11 @@ def converttowebp(input_file_path):
 
     if (width<height):
         resize_wdth = 1200
-        resize_height = str(int((height*resize_wdth)/width))
+        resize_height = (int((height*resize_wdth)/width))
         image.thumbnail(size=((resize_wdth, resize_height)))
     else:
         resize_height = 1500
-        resize_wdth = str(int((width*resize_height)/height))
+        resize_wdth = (int((width*resize_height)/height))
         image.thumbnail(size=((resize_wdth, resize_height)))
 
     resize_command = "-resize {0} {1}".format(resize_wdth,resize_height)
@@ -134,9 +134,3 @@ for i in dict_legth:
 text_file = open(outputpath, "w")
 n = text_file.write(mainstring)
 text_file.close()
-
-
-
-
-
-
