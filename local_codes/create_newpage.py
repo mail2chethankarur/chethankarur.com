@@ -6,6 +6,7 @@ import os, shutil, random
 input_base_path = '/Users/chethankarur/Pictures/web/'
 output_base_path = input_base_path+'webpoutput/'
 website_img_path = '/Users/chethankarur/Pictures/chethankarur.com/img/'
+new_page_name = 'nina'
 
 folders_list = os.listdir(input_base_path)
 
@@ -105,41 +106,48 @@ for i in folders_list:
 
 mainstring = ''
 
-for i in dict_legth:
-    folder_name = i
-    start_num = dict_legth[i][0]+1
-    end_num = dict_legth[i][1]
-    outputpath = '/Users/chethankarur/Pictures/addon.txt'
-    print(start_num,end_num,"HERE")
-    count  =1
-    for i in range(start_num,end_num):
-        iterstring = """<div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p0" data-tags="Animated" data-video-url="false">
-        <div href="#lb-gallery1-6" data-slide-to="{0}"data-toggle="modal">
-            <img alt="" src="img/{1}/{2}.webp">
-            <span class="icon-focus"></span>
-        </div>
-    </div> \n""".format(i,folder_name,i+1)
+# for i in dict_legth:
+#     folder_name = i
+#     start_num = dict_legth[i][0]+1
+#     end_num = dict_legth[i][1]
+#     outputpath = '/Users/chethankarur/Pictures/addon.txt'
+#     print(start_num,end_num,"HERE")
+#     count  =1
+#     for i in range(start_num,end_num):
+#         iterstring = """<div class="mbr-gallery-item mbr-gallery-item__mobirise3 mbr-gallery-item--p0" data-tags="Animated" data-video-url="false">
+#         <div href="#lb-gallery1-6" data-slide-to="{0}"data-toggle="modal">
+#             <img alt="" src="img/{1}/{2}.webp">
+#             <span class="icon-focus"></span>
+#         </div>
+#     </div> \n""".format(i,folder_name,i+1)
 
-        iterstring2 = """<div class="carousel-item">
-    <img alt="" src="img/{0}/{1}.webp">
-    </div>""".format(folder_name,i)
+#         iterstring2 = """<div class="carousel-item">
+#     <img alt="" src="img/{0}/{1}.webp">
+#     </div>""".format(folder_name,i)
         
-        if (count==1):
-            i1 = iterstring
-            i2 = iterstring2
-            count+=1
-        else:
-            i1 += iterstring
-            i2 += iterstring2
+#         if (count==1):
+#             i1 = iterstring
+#             i2 = iterstring2
+#             count+=1
+#         else:
+#             i1 += iterstring
+#             i2 += iterstring2
 
-    mainstring += i1+"\n"+"\n"+i2+"\n"+"\n"
+#     mainstring += i1+"\n"+"\n"+i2+"\n"+"\n"
 
-f = open('/Users/chethankarur/Pictures/chethankarur.com/local_codes/sample_page.html','r')
+# f = open('/Users/chethankarur/Pictures/chethankarur.com/local_codes/sample_page.html','r')
+# sample_page = (f.read())
+
+# sample_page = sample_page.replace('$$$1###',i1)
+# sample_page = sample_page.replace('$$$2###',i2)
+# write_path = '/Users/chethankarur/Pictures/chethankarur.com/martin.html'
+
+
+f = open('/Users/chethankarur/Pictures/chethankarur.com/local_codes/template_page.html','r')
 sample_page = (f.read())
 
-sample_page = sample_page.replace('$$$1###',i1)
-sample_page = sample_page.replace('$$$2###',i2)
-write_path = '/Users/chethankarur/Pictures/chethankarur.com/martin.html'
+sample_page = sample_page.replace('horizoncabins',new_page_name)
+write_path = f"/Users/chethankarur/Pictures/chethankarur.com/{new_page_name}.html"
 
 f = open(write_path, "w+")
 f.write(sample_page)
