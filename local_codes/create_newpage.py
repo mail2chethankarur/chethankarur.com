@@ -6,7 +6,7 @@ import os, shutil, random
 input_base_path = '/Users/chethankarur/Pictures/web/'
 output_base_path = input_base_path+'webpoutput/'
 website_img_path = '/Users/chethankarur/Pictures/chethankarur.com/img/'
-new_page_name = 'nina'
+new_page_name = 'cafymoza'
 
 folders_list = os.listdir(input_base_path)
 
