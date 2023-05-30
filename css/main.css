@@ -398,7 +398,8 @@ a:after {
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
-  width: 100%; 
+  width: 100%;
+  background-color: #eeee4e;;
 }
 .btn-1 {
   background: darken(#ffffff, 1.5%);
@@ -410,6 +411,7 @@ a:after {
     position: absolute;
     top: 0; 
     width: 100%; 
+
   }
   
  .btn-1 rect {
@@ -417,6 +419,7 @@ a:after {
     stroke: #eeee4e;
     stroke-width: 4px;
     stroke-dasharray: 422, 0;
+
   }
 
 
@@ -424,6 +427,7 @@ a:after {
   background: #ffffff
   font-weight: 800;
   letter-spacing: 1px;
+
 }
  .btn-1:hover rect {
     stroke-width: 5;
