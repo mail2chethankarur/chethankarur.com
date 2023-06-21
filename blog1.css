@@ -173,6 +173,11 @@
   margin-right: 20em;
   margin-bottom: var(--dl-space-space-unit);
 }
+.blog1-comment-box {
+  width: 80%;
+  align-self: flex-start;
+  margin-left: var(--dl-space-space-halfunit);
+}
 @media(max-width: 767px) {
   .blog1-burger-menu {
     display: flex;
