@@ -11,7 +11,7 @@ import scipy.cluster
 
 NUM_CLUSTERS =10
 input_base_path = '/Users/chethankarur/Pictures/chethankarur.com/img/nature/'
-output_base_path = '/Users/chethankarur/Documents/StockTest/'
+output_base_path = input_base_path
 
 def get_color_code(image_path):
 	im = Image.open(image_path)
@@ -30,6 +30,30 @@ def get_color_code(image_path):
 	colour = binascii.hexlify(bytearray(int(c) for c in peak)).decode('ascii')
 	return(colour)
 
+def increase_hex_color(hex_code):
+    # Remove the '#' symbol if present
+    hex_code = hex_code.lstrip('#')
+    print('CP1')
+    
+    # Convert the hex code to RGB values
+    r = int(hex_code[0:2], 16)
+    g = int(hex_code[2:4], 16)
+    b = int(hex_code[4:6], 16)
+    print('CP2')
+
+    # Increase each RGB component by one
+    r = min(255, r + 1)
+    g = min(255, g + 1)
+    b = min(255, b + 1)
+    print('CP3')
+    
+    # Convert the updated RGB values to hex format
+    updated_hex = "#{:02x}{:02x}{:02x}".format(r, g, b)
+    print('updated the hex')
+    
+    return updated_hex
+
+
 def get_hsv(hexrgb):
     hexrgb = hexrgb.lstrip("#")   # in case you have Web color specs
     r, g, b = (int(hexrgb[i:i+2], 16) / 255.0 for i in range(0,5,2))
@@ -44,6 +68,18 @@ def final_des(dict_codes_final):
 		shutil.copy(ip_filepath, target_file_path)
 		num_name+=1
 
+def force_add_photo(dict_codes,ccode,path):
+	fixed = 0
+	while(fixed!=1):
+		if(ccode in dict_codes.keys()):
+			ccode = increase_hex_color(ccode)
+		else:
+			dict_codes[ccode]= path
+			fixed = 1
+			print ('Force push sucessful')
+	return dict_codes
+
+
 #main
 folders_list = os.listdir(input_base_path)
 dict_codes = {}
@@ -54,7 +90,9 @@ for i in folders_list:
 		if(ccode not in dict_codes.keys()):
 			dict_codes[ccode]= i
 		else:
-			continue
+			print("STARTING FORCE PUSH")
+			print(i)
+			dict_codes = force_add_photo(dict_codes,ccode,i)
 	except:
 		leave=1
 
