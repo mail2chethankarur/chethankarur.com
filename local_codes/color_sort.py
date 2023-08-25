@@ -10,8 +10,8 @@ import scipy.cluster
 
 
 NUM_CLUSTERS =10
-input_base_path = '/Users/chethankarur/Pictures/chethankarur.com/img/nature/'
-output_base_path = input_base_path
+input_base_path = '/Users/chethankarur/Pictures/chethankarur.com/img/travel/'
+output_base_path = '/Users/chethankarur/Pictures/chethankarur.com/img/travel1/'
 
 def get_color_code(image_path):
 	im = Image.open(image_path)
@@ -33,19 +33,16 @@ def get_color_code(image_path):
 def increase_hex_color(hex_code):
     # Remove the '#' symbol if present
     hex_code = hex_code.lstrip('#')
-    print('CP1')
     
     # Convert the hex code to RGB values
     r = int(hex_code[0:2], 16)
     g = int(hex_code[2:4], 16)
     b = int(hex_code[4:6], 16)
-    print('CP2')
 
     # Increase each RGB component by one
     r = min(255, r + 1)
     g = min(255, g + 1)
     b = min(255, b + 1)
-    print('CP3')
     
     # Convert the updated RGB values to hex format
     updated_hex = "#{:02x}{:02x}{:02x}".format(r, g, b)
@@ -90,7 +87,7 @@ for i in folders_list:
 		if(ccode not in dict_codes.keys()):
 			dict_codes[ccode]= i
 		else:
-			print("STARTING FORCE PUSH")
+			print("STARTING FORCE PUSH",dict_codes[ccode])
 			print(i)
 			dict_codes = force_add_photo(dict_codes,ccode,i)
 	except:
